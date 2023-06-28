@@ -16,6 +16,7 @@ body {
     font-weight: 900;
     margin: 0;
     padding: 0;
+    overflow: hidden;
     text-align: center;
 }
 
@@ -39,6 +40,7 @@ body {
     justify-content: flex-end;
     align-items: center;
     overflow: hidden;
+    font-family: Orbitron, serif;
 }
 
 .button {
@@ -83,6 +85,7 @@ body {
 
 #display-results {
     grid-row: 2 / 3;
+    font-size: 200%;
 }
 
 #delete-button {
@@ -173,4 +176,47 @@ body {
 #operation-add {
     grid-row: 7 / 8;
     grid-column: 4 / 5;
+}
+
+/*@media rules*/
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+    #calc-body {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 98vw;
+        height: 99vh;
+        margin: 0 0 0 0;
+        overflow: hidden;
+        border-radius: 0;
+    }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+    #calc-body {
+        width: calc(70vh / 7 * 4);
+        height: 70vh;
+        margin: 15vh auto;
+    }
+    #display-results {
+        font-size: 230%;
+        width: calc(100% - 30px);
+    }
+    #display-operations {
+        font-size: 180%;
+    }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+    #calc-body {
+        width: 20vw;
+        min-width: 300px;
+        height: calc(20vw / 5 * 9);
+        min-height: 500px;
+        margin: 10vh auto;
+    }
 }
