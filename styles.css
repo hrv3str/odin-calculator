@@ -11,4 +11,15 @@ body {
     background-color: var(--first-color);
     font-family: 'Exo 2', serif;
     color: var(--fourth-color);
+    margin: 0;
+    padding: 0;
+}
+
+#calc-body {
+    display: grid;
+    width: 97vw;
+    height: 98vh;
+    margin: 1vh auto;
+    border-radius: 2rem;
+    background-color: var(--second-color);
 }
