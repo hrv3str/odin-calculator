@@ -6,3 +6,9 @@
 --third-color: #02c39a; 
 --fourth-color: #fce38a; 
 }
+
+body {
+    background-color: var(--first-color);
+    font-family: 'Exo 2', serif;
+    color: var(--fourth-color);
+}
