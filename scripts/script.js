@@ -3,18 +3,45 @@ const resultDisplay = document.getElementById ("display-results")
 const inputButtons = document.querySelectorAll(`.hover`);
 
 let operations = []; // array containing operations to display
+let pendingOperations = {}; // object containing pending operations
+
+function allClear() {
+    operations = [];
+    pendingOperations = {};
+    resultDisplay.textContent = 0;
+    operationDisplay.textContent = '';
+}
+
+function deleteChar() {
+    if (resultDisplay.textContent !== '') {
+        resultDisplay.textContent = resultDisplay.textContent.slice(0, -1);
+    } else {
+    operations.pop();
+    }
+};
+
+function switchNegative() {
+    if (resultDisplay.textContent.startsWith('-')) {
+        resultDisplay.textContent = resultDisplay.textContent.slice(1);
+      } else {
+        resultDisplay.textContent = `-${resultDisplay.textContent}`;
+      }
+};
 
 function displayInput(key) {
     console.log(key.id);
     switch(key.id) {
         case 'clear-button':
-            operations = [];
+            allClear();
             break;
         case 'delete-button':
-            operations.pop();
+            deleteChar();
             break;
+        case 'switch-button':
+            switchNegative();
+            break
         default:
-            operations.push(key.textContent);
+            resultDisplay.textContent = resultDisplay.textContent + key.textContent;
             break;
     }
     operationDisplay.textContent = operations.join('');
