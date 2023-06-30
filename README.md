@@ -1,23 +1,45 @@
-# odin-calculator
-This is a simple calculator project developed as part of the Odin Project curriculum. The goal of this project is to create a functional calculator that can perform basic arithmetic operations.
+# Odin Calculator
 
-Features
-Addition: Add two numbers together.
-Subtraction: Subtract one number from another.
-Multiplication: Multiply two numbers.
-Division: Divide one number by another.
-Clear: Clear the calculator's current input.
-Technologies Used
-The calculator project is built using the following technologies:
+Welcome to Odin Calculator! This is a simple calculator web application built using HTML, CSS, and JavaScript. It allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, and division. The calculator provides a visual display of the operations and results.
 
-HTML: For the structure and layout of the calculator.
-CSS: For styling the calculator and making it visually appealing.
-JavaScript: For implementing the calculator's functionality and performing arithmetic operations.
-Credits
-This project is part of the curriculum provided by the <a href="https://www.theodinproject.com/">Odin Project</a>. The Odin Project is an open-source learning platform that offers free web development courses. It provides a comprehensive curriculum covering various topics, including HTML, CSS, JavaScript, and more. The calculator project is one of the many hands-on projects designed to reinforce the concepts learned throughout the curriculum.
+## Live Preview
 
-Contributing
-Contributions to the calculator project are welcome. If you have any ideas, improvements, or bug fixes, please submit a pull request.
+You can try out the Odin Calculator by visiting the [live preview link](https://hrv3str.github.io/odin-calculator/).
 
-License
-This project is licensed under the MIT License. Feel free to use and modify the code for your own purposes.
+## Features
+
+- Addition: Perform addition operations.
+- Subtraction: Perform subtraction operations.
+- Multiplication: Perform multiplication operations.
+- Division: Perform division operations.
+- Clear: Clear the display and reset the calculator.
+- Delete: Remove the last entered digit or operation.
+- Sign Switch: Toggle between positive and negative numbers.
+- Decimal Point: Enter decimal numbers.
+
+## Usage
+
+1. Open the [live preview link](https://hrv3str.github.io/odin-calculator/) in your web browser.
+2. Use the mouse or keyboard to interact with the calculator.
+3. Click or press the appropriate buttons to enter numbers and perform operations.
+4. The operations and results will be displayed on the screen.
+5. To clear the calculator, click the "AC" button or press the Delete key.
+6. To delete the last entered digit or operation, click the "←" button or press the Backspace key.
+7. To toggle the sign of the number, click the "+/-" button.
+8. To enter a decimal number, click the "." button.
+9. To perform an operation, click the corresponding operation button (+, -, *, or ÷).
+10. To calculate the result, click the "=" button or press the Enter key.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+Feel free to use, modify, and distribute the code as per the terms of the license.
+
+## Acknowledgements
+
+- This project is part of [The Odin Project](https://www.theodinproject.com/) curriculum.
+
+---
+
+Let me know if there's anything else I can assist you with!
