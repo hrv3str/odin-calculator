@@ -3,29 +3,40 @@ const resultDisplay = document.getElementById ("display-results")
 const inputButtons = document.querySelectorAll(`.hover`);
 
 let operations = []; // array containing operations to display
+let result = []; // array containing result
 let pendingOperations = {}; // object containing pending operations
 
 function allClear() {
     operations = [];
+    result = [];
     pendingOperations = {};
     resultDisplay.textContent = 0;
     operationDisplay.textContent = '';
 }
 
 function deleteChar() {
-    if (resultDisplay.textContent !== '') {
-        resultDisplay.textContent = resultDisplay.textContent.slice(0, -1);
+    if (result.length !== 0) {
+        result.pop();
     } else {
     operations.pop();
     }
 };
 
-function switchNegative() {
-    if (resultDisplay.textContent.startsWith('-')) {
-        resultDisplay.textContent = resultDisplay.textContent.slice(1);
+function signSwitch() {
+    if (result[0] === '-') {
+        result.shift();
       } else {
-        resultDisplay.textContent = `-${resultDisplay.textContent}`;
+        result.unshift('-');
+
       }
+};
+
+function divide() {
+    operations.push(`${result.toString()} ÷ `);
+    pendingOperations.item = {
+        divide: result.toString()
+    };
+    result = [];
 };
 
 function displayInput(key) {
@@ -38,13 +49,14 @@ function displayInput(key) {
             deleteChar();
             break;
         case 'switch-button':
-            switchNegative();
+            signSwitch();
             break
         default:
-            resultDisplay.textContent = resultDisplay.textContent + key.textContent;
+            result.push(key.textContent);
             break;
     }
     operationDisplay.textContent = operations.join('');
+    resultDisplay.textContent = result.join('');
 };
 
 function handleKeyboardInput(e) {
